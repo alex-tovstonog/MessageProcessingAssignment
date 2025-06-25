@@ -30,9 +30,6 @@ services:
         container_name: message-api
         ports:
             - "8888:8888"
-        # environment:
-        #   - ASPNETCORE_URLS=http://+:8888
-        #   - DOTNET_ENVIRONMENT=Development
         depends_on:
             - rabbitmq
             - postgres
