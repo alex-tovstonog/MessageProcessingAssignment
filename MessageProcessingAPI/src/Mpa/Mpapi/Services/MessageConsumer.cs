@@ -31,6 +31,7 @@ namespace MessageProcessingAPI.Mpa.Mpapi.Services
 
             var message = _mapper.Map<Message>(messageDto);
             message.Id = Guid.NewGuid();
+            message.CreatedAt = DateTime.UtcNow;
 
             _dbContext.Messages.Add(message);
             await _dbContext.SaveChangesAsync();

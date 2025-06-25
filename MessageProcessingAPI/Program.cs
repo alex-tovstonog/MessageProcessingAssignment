@@ -4,6 +4,7 @@ using MessageProcessingAPI.Mpa.Mpapi.Data;
 using MessageProcessingAPI.Mpa.Mpapi.Dto;
 using MessageProcessingAPI.Mpa.Mpapi.Models;
 using MessageProcessingAPI.Mpa.Mpapi.Services;
+using MessageProcessingAPI.src.Mpa.Mpapi.MessageReader.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,7 @@ builder.Services.AddSwaggerGen();
 
 // Register the message service
 builder.Services.AddScoped<IMessageService, RabbitMqMessageService>();
+builder.Services.AddScoped<IMessageQueryService, MessageQueryService>();
 
 // Configure MassTransit with RabbitMQ
 builder.Services.AddMassTransit(x =>
@@ -55,6 +57,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddAutoMapper(cfg =>
 {
     cfg.CreateMap<MessageDto, Message>();
+    cfg.CreateMap<Message, MessageDto>();
 });
 
 
