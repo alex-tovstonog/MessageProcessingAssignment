@@ -30,6 +30,7 @@ namespace MessageProcessingAPI.Mpa.Mpapi.Services
             _logger.LogTrace("Saving message: {Message}", messageDto);
 
             var message = _mapper.Map<Message>(messageDto);
+            message.Id = Guid.NewGuid();
 
             _dbContext.Messages.Add(message);
             await _dbContext.SaveChangesAsync();

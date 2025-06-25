@@ -1,7 +1,8 @@
 using MassTransit;
 using MessageProcessingAPI.Mpa.Extensions;
 using MessageProcessingAPI.Mpa.Mpapi.Data;
-using MessageProcessingAPI.Mpa.Mpapi.Mapping;
+using MessageProcessingAPI.Mpa.Mpapi.Dto;
+using MessageProcessingAPI.Mpa.Mpapi.Models;
 using MessageProcessingAPI.Mpa.Mpapi.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -51,7 +52,10 @@ Console.WriteLine("DB Connection: " + connectionString);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
 
-builder.Services.AddAutoMapper(typeof(MessageMappingProfile));
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.CreateMap<MessageDto, Message>();
+});
 
 
 var app = builder.Build();
