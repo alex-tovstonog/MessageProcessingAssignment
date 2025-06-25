@@ -9,7 +9,7 @@ To build and run the project:
 docker compose up --build
 
 This will start:
-the API at: http://localhost:8888
+the API locally on port 8888. It's without UI so please use swagger (link below) to see/test endpoint(s)
 
 the RabbitMQ UI at: http://localhost:15672
 (login: guest / guest)
