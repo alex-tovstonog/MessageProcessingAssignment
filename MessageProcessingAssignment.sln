@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageProcessingAPI", "MessageProcessingAPI\MessageProcessingAPI.csproj", "{9A49F6D4-3C40-4369-98B1-045EF92B34B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A49F6D4-3C40-4369-98B1-045EF92B34B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A49F6D4-3C40-4369-98B1-045EF92B34B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A49F6D4-3C40-4369-98B1-045EF92B34B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A49F6D4-3C40-4369-98B1-045EF92B34B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0C0801D-6A54-41E0-9530-614369E1AB1F}
+	EndGlobalSection
+EndGlobal
